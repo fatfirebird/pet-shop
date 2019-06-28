@@ -107,3 +107,13 @@ let header            = document.querySelector(".scroll-header");
       }
     }
   });
+
+  window.addEventListener("scroll", function(evt) {
+    if (window.pageYOffset > 240 && header.classList.contains("scroll-header--hide")) {
+      header.classList.remove("scroll-header--hide");
+    } else {
+      if (window.pageYOffset <= 240 && !header.classList.contains("scroll-header--hide")) {
+        header.classList.add("scroll-header--hide");
+      };
+    }
+  });
