@@ -1,9 +1,7 @@
 .form-contact {
 
 
-  .form-contact__item {
 
-  }
 
   .form-contact__label {
     @include visually-hidden();
@@ -26,6 +24,13 @@
 
       &--text {
         resize: none;
+      }
+
+      &--red {
+        border-color: red;
+      }
+      &--green {
+        border-color: green;
       }
   }
 

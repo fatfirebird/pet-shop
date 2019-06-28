@@ -417,6 +417,10 @@
     color: #989b9f; }
   .form-contact .form-contact__input--text {
     resize: none; }
+  .form-contact .form-contact__input--red {
+    border-color: red; }
+  .form-contact .form-contact__input--green {
+    border-color: green; }
 
 .form-contact .form-contact__submit {
   font-size: 14px;
