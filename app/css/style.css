@@ -1,15 +1,16 @@
 @charset "UTF-8";
 .main-page {
   position: relative;
-  font-family: 'Roboto', arial, sans-serif;
-}
+  font-family: 'Roboto', arial, sans-serif; }
 
 .page-header {
   background-color: #78b8b8;
   background-image: url("../img/header__bg.jpg");
   color: #f9ebd9;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%;
+  z-index: 1; }
   .page-header .page-header__title {
     position: absolute;
     width: 1px;
@@ -19,6 +20,12 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0; }
+  .page-header--fixed {
+    position: fixed; }
+  .page-header--hide {
+    opacity: 0; }
+  .page-header:hover {
+    opacity: 1; }
 
 .page-nav {
   width: 960px;
@@ -499,7 +506,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(20, 20, 20, 0.79);
+  background-color: rgba(20, 20, 20, 0.8);
   z-index: 1; }
 
 .overlay--hide {

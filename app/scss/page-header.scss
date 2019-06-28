@@ -7,7 +7,23 @@
   display: flex;
   justify-content: center;
 
+  width: 100%;
+
+  z-index: 1;
+
     .page-header__title {
       @include visually-hidden();
+    }
+
+    &--fixed {
+      position: fixed;
+    }
+
+    &--hide {
+      opacity: 0;
+    }
+
+    &:hover {
+      opacity: 1;
     }
 }
