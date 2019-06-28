@@ -1,17 +1,22 @@
-@import "mixins";
-@import "variables";
-
-.page-header {
+.scroll-header {
   @include bg($top-bg__color, $top-bg__img, $top-font__color);
+
+  position: fixed;
+  top: 0;
 
   display: flex;
   justify-content: center;
 
   width: 100%;
 
+  opacity: 0;
   z-index: 1;
 
-    .page-header__title {
-      @include visually-hidden();
+    &--hide {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 1;
     }
 }

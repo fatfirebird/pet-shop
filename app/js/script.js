@@ -8,7 +8,7 @@ let popupTransit      = document.querySelector(".popup--transit");
 let linkTransit       = document.querySelector(".page-footer__transit")
 let overlay           = document.querySelector(".overlay");
 let anchors           = document.querySelectorAll(".page-nav__link");
-let header            = document.querySelector(".page-header");
+let header            = document.querySelector(".scroll-header");
 
   anchors.forEach(function(anchors) {
     anchors.addEventListener('click', function (evt) {
