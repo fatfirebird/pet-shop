@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Зоомагазин </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="main-page">
+    <header class="page-header">
+      <h1 class="page-header__title">Зоомагазин</h1>
+      <nav class="page-nav">
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a class="page-nav__link page-nav__link--about" href="#about">О нас</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link page-nav__link--merch" href="#merch">Продукция</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link page-nav__link--logo" href="#slider">
+              <img class="page-nav__logo" src="img/logo.png" alt="Логотип">
+            </a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link page-nav__link--news" href="#news">Новости</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link page-nav__link--contacts" href="#contacts">Связь с нами</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <section id="slider" class="main-slider">
+        <h2 class="main-slider__title">Зоомагазин</h2>
+        <div class="main-slider__wrapper slider">
+          <img class="slider-photo" src="img/zoo_shop--1.jpg" alt="Фото зоомагазина 1">
+          <img class="slider-photo slider-photo--hide" src="img/zoo_shop--2.jpg" alt="Фото зоомагазина 2">
+          <button class="slider-button slider-button--left slider-button--hide" type="button" name="button"><</button>
+          <button class="slider-button slider-button--right" type="button" name="button">></button>
+          <span class="slider__description">Наш зоомагазин "Johny`s Dog" !</span>
+        </div>
+        <p class="main-slider__text">Приветсвуем Вас на странице нашего зоомагазина!</p>
+      </section>
+
+      <section id="about" class="about">
+        <h2 class="about__title">О нас</h2>
+        <ul class="about__list">
+          <li class="about__item about-item">
+            <h3 class="about-item__title">Быстро</h3>
+            <p class="about-item__text">Знаете, как важна скорость в бизнесе? В кратчайшие сроки мы готовы заключить договор на оптовую доставку кормов для Вас.</p>
+          </li>
+          <li class="about__item about-item">
+            <h3 class="about-item__title">Инновационно</h3>
+            <p class="about-item__text">Наши корма созданы по последним технологиям при поддержке ветеренаров и диетологов. Заказывая у нас, вы получите самый технологичный продукт на рынке.</p>
+          </li>
+          <li class="about__item about-item">
+            <h3 class="about-item__title">Надежно</h3>
+            <p class="about-item__text">Мы работаем уже 15 лет и успела себя зарекомендовать в качестве оптового поставщика кормов для кошек и собак. Вы не пожалеете, выбрав нас.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="merch" class="merch">
+        <h2 class="merch__title">Наши продукты</h2>
+        <div class="merch__wrapper">
+          <div class="merch__product product product--dog">
+            <h3 class="product__title">Корм для собак</h3>
+            <img class="product__photo" src="img/product-dog.png" alt="Корм для собак">
+            <p class="product__about">
+              Предлагаем Вам корм для как для щенков, так и для взрослых особей любых пород. Наш корм, разработанный ветеренарами и диетологами, обеспечит лучшее питание для собак.
+            </p>
+          </div>
+          <div class="merch__product product product--cat">
+            <h3 class="product__title">Корм для кошек</h3>
+            <img class="product__photo" src="img/product-cat.png" alt="Корм для кошек">
+            <p class="product__about">
+              Мы поставляем сухие и влажные корма для котов, содержащие специальную комбинацию ингредиентов для поддержания здоровья вашего питомца в течение продолжительного времени.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="news">
+        <h2 class="news__title">Новости</h2>
+        <ul class="news__list">
+          <li class="news__item news-item">
+            <div class="news-item__text-wrapper text-wrapper">
+              <h3 class="text-wrapper__title">Почему котики часто мнут что-либо своими лапками?</h3>
+              <time class="text-wrapper__time">28.06.2019</time>
+              <p class="text-wrapper__text">Одна из известных причин заключается в том, что это всего лишь привычка из детства. Так, еще котятами, в процессе кормления они мяли живот мамы, чтобы улучшить приток молока. В более взрослом возрасте они могут повторять такие движения, когда им необходима ласка или чувство защищенности, которые они могут получить только от хозяина.</p>
+            </div>
+            <div class="news-item__image-wrapper image-wrapper">
+              <img class="image-wrapper__news-image" src="img/news-img-1.jpg" alt="Картинка для новости">
+            </div>
+          </li>
+          <li class="news__item news-item">
+            <div class="news-item__text-wrapper text-wrapper">
+              <h3 class="text-wrapper__title">Зачем в Швейцарии строят лестницы снаружи домов</h3>
+              <time class="text-wrapper__time">16.06.2019</time>
+              <p class="text-wrapper__text">Есть много различных стран или отдельных мест, где кошки — в почете. Однако в Швейцарии, и в особенности в столице страны Берне, кошки есть почти у всех жителей и для них даже строят отдельные лестницы — прямо по фасаду зданий. Более того, исключительно ради мурлык заказывают отдельные окна.</p>
+            </div>
+            <div class="news-item__image-wrapper image-wrapper">
+              <img class="image-wrapper__news-image" src="img/news-img-2.jpg" alt="Картинка для новости">
+            </div>
+          </li>
+          <li class="news__item news-item">
+            <div class="news-item__text-wrapper text-wrapper">
+              <h3 class="text-wrapper__title">Чипирование собак</h3>
+              <time class="text-wrapper__time">12.06.2019</time>
+              <p class="text-wrapper__text">Среди собаководов уже не менее 8 лет ходят слухи, что Государственная Дума вот-вот примет закон об обязательном чипировании животных. Но если на территории России вживление электронных чипов – дело пока добровольное, то в странах Евросоюза каждый владелец добровольно приводит своего песика в клинику для чипирования. А заграничных странах такая процедура проводится уже более 20 лет.</p>
+            </div>
+            <div class="news-item__image-wrapper image-wrapper">
+              <img class="image-wrapper__news-image" src="img/news-img-3.jpg" alt="Картинка для новости">
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contacts" class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Связаться с нами</h2>
+          <form class="form-contact" action="php/mail.php" method="post">
+            <div class="form-contact__item">
+              <label class="form-contact__label visually-hidden" for="">Имя</label>
+              <input class="form-contact__input" type="text" name="name" placeholder="Имя">
+            </div>
+            <div class="form-contact__item">
+              <label class="form-contact__label visually-hidden" for="">E-mail</label>
+              <input class="form-contact__input" type="email" name="mail" placeholder="E-mail">
+            </div>
+            <div class="form-contact__item">
+              <label class="form-contact__label visually-hidden" for="">Тема</label>
+              <input class="form-contact__input" type="text" name="topic" placeholder="Тема">
+            </div>
+            <div class="form-contact__item">
+              <label class="form-contact__label visually-hidden" for="">Сообщение</label>
+              <textarea class="form-contact__input form-contact__input--text" name="text" rows="8" cols="80" placeholder="Сообщение"></textarea>
+            </div>
+            <button class="form-contact__submit" type="submit" name="button">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <h2 class="page-footer__title">Мы в социальных сетях</h2>
+      <ul class="social-list">
+        <li class="social-list__item social-item">
+          <a class="social-item__link social-item__link--fb" href="https://ru-ru.facebook.com/">
+            <span class="social-item__network">Фейсбук</span>
+            <img src="img/fb__icon.png" alt="" width="40px" height="40px">
+          </a>
+        </li>
+        <li class="social-list__item social-item">
+          <a class="social-item__link social-item__link--tw" href="https://twitter.com/">
+            <span class="social-item__network">Твиттер</span>
+            <img src="img/tw__icon.png" alt="" width="40px" height="40px">
+          </a>
+        </li>
+        <li class="social-list__item social-item">
+          <a class="social-item__link social-item__link--in" href="https://www.instagram.com">
+            <span class="social-item__network">Инстаграм</span>
+            <img src="img/in__icon.png" alt="" width="40px" height="40px">
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__transit" href="">Как до нас добраться?</a>
+    </footer>
+
+    <div class="popup popup--form popup--hide">
+      <div class="popup-wrapper">
+        <span class="popup-text">Ваше сообщение успешно отправлено!</span>
+      </div>
+    </div>
+    <div class="popup popup--transit popup--hide">
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCcUIL8P" width="100%" height="100%" frameborder="1" allowfullscreen="true"></iframe>
+    </div>
+    <div class="overlay overlay--hide"/>
+    <script src="js/script.js"></script>
+  </body>
+</html>

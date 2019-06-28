@@ -1,0 +1,13 @@
+@import "mixins";
+@import "variables";
+
+.page-header {
+  @include bg($top-bg__color, $top-bg__img, $top-font__color);
+
+  display: flex;
+  justify-content: center;
+
+    .page-header__title {
+      @include visually-hidden();
+    }
+}

@@ -1,0 +1,41 @@
+.form-contact {
+
+
+  .form-contact__item {
+
+  }
+
+  .form-contact__label {
+    @include visually-hidden();
+  }
+
+  .form-contact__input {
+    width: 500px;
+
+    padding: 5px 0px 5px 5px;
+    margin-bottom: 10px;
+    border: 1px solid $form__color;
+
+    border-radius: 5px;
+
+    color: $main-font__color;
+
+      &::placeholder {
+        color: $form__color;
+      }
+
+      &--text {
+        resize: none;
+      }
+  }
+
+  .form-contact__submit {
+    @include font(14px, 14px * 1.25, $main-font__color);
+    padding: 5px 15px 5px 15px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: #fcfaf7;
+    cursor: pointer;
+  }
+}
