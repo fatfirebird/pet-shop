@@ -5,12 +5,12 @@
   flex-wrap: wrap;
 
   margin-bottom: 30px;
-
-    .social-list__item {
-      margin-right: 60px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-    }
 }
+
+.social-list__item {
+  margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }

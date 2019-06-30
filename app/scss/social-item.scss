@@ -1,38 +1,30 @@
-.social-item {
+.social-item__link {
+  @include font($main-font__size, $main-font__size * 1.25, $contacts-font__color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .social-item__link {
-    @include font($main-font__size, $main-font__size * 1.25, $contacts-font__color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 80px;
+  height: 80px;
 
-    width: 80px;
-    height: 80px;
+  border-radius: 50%;
+  background-color: $contacts-font__color;
+  box-shadow:
+    0px 0px 0px 3px #383a3c,
+    0px 0px 0px 6px $contacts-font__color;
 
-    border-radius: 50%;
-    background-color: $contacts-font__color;
+  text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #c7bca3;
     box-shadow:
       0px 0px 0px 3px #383a3c,
-      0px 0px 0px 6px $contacts-font__color;
+      0px 0px 0px 6px $contacts-font__color,
+      0px 0px 6px 9px #e18867;
+    }
+}
 
-    text-decoration: none;
-
-      &:hover,
-      &:focus {
-        color: #c7bca3;
-      box-shadow:
-        0px 0px 0px 3px #383a3c,
-        0px 0px 0px 6px $contacts-font__color,
-        0px 0px 6px 9px #e18867;
-      }
-
-
-  }
-
-  .social-item__network {
-    @include visually-hidden();
-
-  }
-
-
+.social-item__network {
+  @include visually-hidden();
 }

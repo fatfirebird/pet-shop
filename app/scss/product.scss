@@ -10,22 +10,22 @@
   &--cat {
     align-items: flex-end;
   }
+}
 
-  .product__title {
-    align-self: center;
+.product__title {
+  align-self: center;
 
-    margin: 0 0 10px 0;
-  }
+  margin: 0 0 10px 0;
+}
 
-  .product__photo {
-    display: block;
+.product__photo {
+  display: block;
 
-    max-width: 500px;
-    max-height: 300px;
-    margin-bottom: 20px;
-  }
+  max-width: 500px;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
 
-  .product__about {
-    margin: 0;
-  }
+.product__about {
+  margin: 0;
 }

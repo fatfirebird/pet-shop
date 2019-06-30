@@ -27,18 +27,18 @@
     background-color: #d45244;
     transform: translateX(-50%);
   }
+}
 
-  .about-item__title {
-    @include font($main-header--small__size, $main-header--small__size * 1.25, $main-font__color);
-    text-transform: uppercase;
+.about-item__title {
+  @include font($main-header--small__size, $main-header--small__size * 1.25, $main-font__color);
+  text-transform: uppercase;
 
-    margin: 20px 0px 20px 0px;
-  }
+  margin: 20px 0px 20px 0px;
+}
 
-  .about-item__text {
-    @include font($main-font__size, $main-font__size * 1.25, $main-font__color);
-    margin: 0;
+.about-item__text {
+  @include font($main-font__size, $main-font__size * 1.25, $main-font__color);
+  margin: 0;
 
-    text-align: center;
-  }
+  text-align: center;
 }

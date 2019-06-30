@@ -3,18 +3,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  .news__title {
-    @include font($main-header--big__size, $main-header--big__size * 1.25, $main-font__color);
-    @include title($main-shadow);
+.news__title {
+  @include font($main-header--big__size, $main-header--big__size * 1.25, $main-font__color);
+  @include title($main-shadow);
 
-    &::after {
-      @include xxx(-6px);
-    }
+  &::after {
+    @include xxx(-6px);
   }
+}
 
-  .news__list {
-    @include list-reset();
-    width: 960px;
-  }
+.news__list {
+  @include list-reset();
+  width: 960px;
 }

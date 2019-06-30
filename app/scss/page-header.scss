@@ -10,8 +10,8 @@
   width: 100%;
 
   z-index: 1;
+}
 
-    .page-header__title {
-      @include visually-hidden();
-    }
+.page-header__title {
+  @include visually-hidden();
 }

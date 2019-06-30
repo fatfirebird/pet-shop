@@ -6,29 +6,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-    .merch__title {
-      @include font($main-header--big__size, $main-header--big__size * 1.25, $main-font__color);
-      @include title($main-shadow);
+.merch__title {
+  @include font($main-header--big__size, $main-header--big__size * 1.25, $main-font__color);
+  @include title($main-shadow);
 
-      &::after {
-        @include xxx(-15px);
-      }
-    }
+  &::after {
+    @include xxx(-15px);
+  }
+}
 
-    .merch__wrapper {
-      display: flex;
-      justify-content: space-between;
+.merch__wrapper {
+  display: flex;
+  justify-content: space-between;
 
-      width: 960px;
-      margin-bottom: 20px;
-    }
+  width: 960px;
+  margin-bottom: 20px;
+}
 
-    .merch__product {
-      width: 50%;
+.merch__product {
+  width: 50%;
 
-        &:first-child {
-          margin-right: 20px;
-        }
+    &:first-child {
+      margin-right: 20px;
     }
 }
