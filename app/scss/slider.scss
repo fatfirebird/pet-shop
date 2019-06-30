@@ -1,0 +1,34 @@
+.slider {
+  display: block;
+  position: relative;
+
+  width: 920px;
+  height: 400px;
+
+  background-color: $main-slider-bg__color;
+  border: 20px solid #fbfaf6;
+  border-bottom-width: 30px;
+
+  .slider-photo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider-photo--hide {
+    display: none;
+  }
+
+  .slider-photo--show {
+    display: block;
+  }
+
+  .slider__description {
+    @include font($main-header--small__size, $main-header--small__size * 1.25, $main-font__color);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

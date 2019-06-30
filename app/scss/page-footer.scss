@@ -1,0 +1,34 @@
+.page-footer {
+  @include bg($contacts-bg__color, $contacts-bg__img, $contacts-font__color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .page-footer__title {
+    @include font($main-header--small__size, $main-header--small__size * 1.25, $contacts-font__color);
+    position: relative;
+
+    margin: 20px 0 20px 0;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+
+        width: 50%;
+        height: 2px;
+
+        transform: translateX(-50%);
+        background-color: $contacts-font__color;
+      }
+  }
+
+  .page-footer__transit {
+    margin: 0 0 20px 0;
+
+    color: $contacts-font__color;
+  }
+}

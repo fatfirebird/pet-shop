@@ -1,0 +1,25 @@
+.contacts {
+  @include bg($contacts-bg__color, $contacts-bg__img, $contacts-font__color);
+  display: flex;
+  justify-content: center;
+
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 960px;
+
+    margin-bottom: 20px;
+  }
+
+  .contacts__title {
+    @include font($main-header--big__size, $main-header--big__size * 1.25, $contacts-font__color);
+    @include title($contacts-shadow);
+
+    &::after {
+      @include xxx(-6px);
+    }
+  }
+
+}

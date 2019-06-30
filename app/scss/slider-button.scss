@@ -1,0 +1,38 @@
+.slider-button {
+  position: absolute;
+  top: 50%;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: #fbfaf6;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $top-bg__color;
+
+    }
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+    &--hide {
+      display: none;
+    }
+
+    &--show {
+      display: block;
+    }
+}
