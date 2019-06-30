@@ -8,27 +8,29 @@
   background-color: $main-slider-bg__color;
   border: 20px solid #fbfaf6;
   border-bottom-width: 30px;
+}
 
-  .slider-photo {
-    display: block;
+.slider-photo {
+  position: absolute;
 
-    width: 100%;
-    height: 100%;
-  }
+  width: 100%;
+  height: 100%;
+}
 
-  .slider-photo--hide {
-    display: none;
-  }
 
-  .slider-photo--show {
-    display: block;
-  }
+.slider-photo--hide {
+  @include slider(slider--hide);
 
-  .slider__description {
-    @include font($main-header--small__size, $main-header--small__size * 1.25, $main-font__color);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+}
+
+.slider-photo--show {
+  @include slider(slider--show);
+}
+
+.slider__description {
+  @include font($main-header--small__size, $main-header--small__size * 1.25, $main-font__color);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
