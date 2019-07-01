@@ -23,20 +23,41 @@
   border: 0; }
 
 .scroll-header {
-  background-color: #78b8b8;
-  background-image: url("../img/header__bg.jpg");
-  color: #f9ebd9;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: center;
   width: 100%;
+  background-color: rgba(30, 30, 30, 0.7);
+  /*
+  background: transparentize(100, 100, 100, 0.2);
+*/
   opacity: 0;
   z-index: 1; }
-  .scroll-header--hide {
-    display: none; }
-  .scroll-header:hover {
-    opacity: 1; }
+
+.scroll-header--show {
+  opacity: 0; }
+  .scroll-header--show:hover {
+    animation-name: slider--show;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; }
+
+.scroll-header--hide {
+  animation-name: slider--hide;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+
+.scroll-header--visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
 
 .page-nav {
   width: 960px;
@@ -72,9 +93,10 @@
   text-decoration: none;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
   .page-nav__link:hover {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7); }
-  .page-nav__link--logo {
-    margin-top: 0; }
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); }
+
+.page-nav__link--logo {
+  margin-top: 0; }
 
 .page-nav--scroll {
   max-height: 100px; }
@@ -87,6 +109,8 @@
   line-height: 30px;
   color: #f9ebd9;
   margin: 0; }
+  .page-nav__link--scroll:hover {
+    color: #ffdcb1; }
 
 .page-nav__logo--scroll {
   width: 50px;
@@ -134,13 +158,13 @@
 
 .slider-photo--hide {
   animation-name: slider--hide;
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
 
 .slider-photo--show {
   animation-name: slider--show;
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
 
@@ -162,19 +186,30 @@
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  outline: none;
   background-color: #fbfaf6;
   transform: translateY(-50%);
   cursor: pointer; }
   .slider-button:hover, .slider-button:focus {
     background-color: #78b8b8; }
-  .slider-button--left {
-    left: 0; }
-  .slider-button--right {
-    right: 0; }
-  .slider-button--hide {
-    display: none; }
-  .slider-button--show {
-    display: block; }
+
+.slider-button--left {
+  left: 0; }
+
+.slider-button--right {
+  right: 0; }
+
+.slider-buttton--hide {
+  animation-name: slider--hide;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+
+.slider-buttton--show {
+  animation-name: slider--show;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
 
 .about {
   background-color: #e1dccc;

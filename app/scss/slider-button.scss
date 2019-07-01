@@ -10,6 +10,7 @@
   width: 30px;
   height: 30px;
 
+  outline: none;
   background-color: #fbfaf6;
   transform: translateY(-50%);
   cursor: pointer;
@@ -17,22 +18,21 @@
     &:hover,
     &:focus {
       background-color: $top-bg__color;
-
     }
+}
 
-    &--left {
-      left: 0;
-    }
+.slider-button--left {
+  left: 0;
+}
 
-    &--right {
-      right: 0;
-    }
+.slider-button--right {
+  right: 0;
+}
 
-    &--hide {
-      display: none;
-    }
+.slider-buttton--hide {
+  @include slider(slider--hide, 0.3s);
+}
 
-    &--show {
-      display: block;
-    }
+.slider-buttton--show {
+  @include slider(slider--show, 0.3s);
 }
