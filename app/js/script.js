@@ -1,18 +1,31 @@
+let slider            = document.querySelector(".slider");
 let sliderButtonLeft  = document.querySelector(".slider-button--left");
 let sliderButtonRight = document.querySelector(".slider-button--right");
-let sliderImgFirst    = document.querySelector(".slider-photo:nth-child(n)");
-let sliderImgLast     = document.querySelector(".slider-photo:nth-child(2n)");
-let formButton        = document.querySelector(".form-contact__submit");
 let formInputName     = document.querySelector(".form-contact__input--name");
 let formInputEmail    = document.querySelector(".form-contact__input--email");
 let formInputTopic    = document.querySelector(".form-contact__input--topic");
 let formInputText     = document.querySelector(".form-contact__input--text");
+let formButton        = document.querySelector(".form-contact__submit");
 let popupForm         = document.querySelector(".popup--form");
 let popupTransit      = document.querySelector(".popup--transit");
 let linkTransit       = document.querySelector(".page-footer__transit");
 let overlay           = document.querySelector(".overlay");
 let anchors           = document.querySelectorAll(".page-nav__link");
 let header            = document.querySelector(".scroll-header");
+let slideIndex        = 1;
+let slides            = document.getElementsByClassName("slider-photo");
+
+slidesMove(slideIndex);
+
+  slider.addEventListener('mouseover', function(evt) {
+    sliderButtonLeft.classList.add('slider-buttton--show');
+    sliderButtonRight.classList.add('slider-buttton--show');
+  });
+
+  slider.addEventListener('mouseout', function(evt) {
+    sliderButtonLeft.classList.remove('slider-buttton--show');
+    sliderButtonRight.classList.remove('slider-buttton--show');
+  });
 
   anchors.forEach(function(anchors) {
     anchors.addEventListener('click', function (evt) {
@@ -50,29 +63,44 @@ let header            = document.querySelector(".scroll-header");
     })
   });
 
+
   sliderButtonLeft.addEventListener("click", function(evt) {
     evt.preventDefault();
-    sliderButtonLeft.classList.add("slider-button--hide");
-    sliderButtonLeft.classList.remove("slider-button--show");
-    sliderButtonRight.classList.add("slider-button--show");
-    sliderButtonRight.classList.remove("slider-button--hide");
-    sliderImgFirst.classList.add("slider-photo--show")
-    sliderImgLast.classList.add("slider-photo--hide");
-    sliderImgFirst.classList.remove("slider-photo--hide");
-    sliderImgLast.classList.remove("slider-photo--show");
+    if (slideIndex <= 0) {
+      slideIndex = slides.length - 1;
+    } else {
+      slideIndex--;
+    }
+    slidesMove(slideIndex);
   });
+
 
   sliderButtonRight.addEventListener("click", function(evt) {
     evt.preventDefault();
-    sliderButtonLeft.classList.add("slider-button--show");
-    sliderButtonLeft.classList.remove("slider-button--hide");
-    sliderButtonRight.classList.add("slider-button--hide");
-    sliderButtonRight.classList.remove("slider-button--show");
-    sliderImgFirst.classList.add("slider-photo--hide");
-    sliderImgFirst.classList.remove("slider-photo--show");
-    sliderImgLast.classList.add("slider-photo--show");
-    sliderImgLast.classList.remove("slider-photo--hide");
+    if (slideIndex >= slides.length - 1) {
+      slideIndex = 0;
+    } else {
+      slideIndex++;
+    }
+    slidesMove(slideIndex);
   });
+
+  function slidesMove(slideIndex) {
+    let n = slideIndex;
+    let currentSlide = slides[n];
+    let next = slides[n + 1];
+    let prev = slides[n - 1];
+
+    if (n == 0) {
+      prev = slides[slides.length - 1];
+    } else
+    if (n == slides.length - 1) {
+      next = slides[0];
+    };
+    currentSlide.classList.add("slider-photo--show");
+    prev.classList.remove("slider-photo--show");
+    next.classList.remove("slider-photo--show");
+  }
 
   formButton.addEventListener("click", function(evt) {
     let formElements = [formInputName, formInputEmail, formInputTopic, formInputText];
@@ -82,7 +110,7 @@ let header            = document.querySelector(".scroll-header");
         let formElement = formElements[i];
         if (!formElement.value) {
           formElement.classList.add("form-contact__input--red");
-        } else { 
+        } else {
           formElement.classList.remove("form-contact__input--red");
           formElement.classList.add("form-contact__input--green");
         }
@@ -134,11 +162,21 @@ let header            = document.querySelector(".scroll-header");
   });
 
   window.addEventListener("scroll", function(evt) {
-    if (window.pageYOffset > 240 && header.classList.contains("scroll-header--hide")) {
-      header.classList.remove("scroll-header--hide");
+    if (window.pageYOffset > 240 && !header.classList.contains("scroll-header--show")) {
+      header.classList.add("scroll-header--show");
+      header.classList.remove("scroll-header--visually-hidden");
     } else {
-      if (window.pageYOffset <= 240 && !header.classList.contains("scroll-header--hide")){
-        header.classList.add("scroll-header--hide");
+      if (window.pageYOffset <= 240 && header.classList.contains("scroll-header--show")){
+        header.classList.remove("scroll-header--show");
+        header.classList.add("scroll-header--visually-hidden");
       }
     }
   });
+
+  header.addEventListener("mouseover", function() {
+    header.classList.remove("scroll-header--hide");
+  })
+
+  header.addEventListener("mouseout", function() {
+    header.classList.add("scroll-header--hide");
+  })

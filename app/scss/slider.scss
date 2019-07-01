@@ -19,12 +19,12 @@
 
 
 .slider-photo--hide {
-  @include slider(slider--hide);
+  @include slider(slider--hide, 0.75s);
 
 }
 
 .slider-photo--show {
-  @include slider(slider--show);
+  @include slider(slider--show, 0.75s);
 }
 
 .slider__description {
