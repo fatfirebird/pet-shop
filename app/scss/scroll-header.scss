@@ -8,22 +8,17 @@
   width: 100%;
 
   background-color: $scroll-bg__color;
-
-  opacity: 0;
   z-index: 1;
 }
 
 .scroll-header--show {
-
-  opacity: 0;
-
   &:hover {
     @include frames(element--show, 0.4s);
   }
 }
 
 .scroll-header--hide {
-  @include frames(elementr--hide, 0.4s);
+  @include frames(element--hide, 0.4s);
 }
 
 .scroll-header--visually-hidden {
