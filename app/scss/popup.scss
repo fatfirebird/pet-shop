@@ -8,20 +8,23 @@
 
   transform: translate(-50%, -50%);
   z-index: 2;
+
+  @include frames(popup-animation, 0.5s);
+
 }
 
 .popup--form {
   width: 500px;
   height: 200px;
 
-  box-shadow: 0px 0px 15px 2px #e1e1e1;
+  box-shadow: $popup__shadow;
 }
 
 .popup--transit {
   width: 900px;
   height: 400px;
 
-  border: 10px solid #fbfaf6;
+  border: 10px solid $popup-border__color;
 }
 
 .popup--hide {

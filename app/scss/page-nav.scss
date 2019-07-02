@@ -39,10 +39,12 @@
   display: block;
 
   text-decoration: none;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: $link-shadow;
 
-    &:hover {
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    &:hover,
+    &:focus {
+      @include frames(link-animation, 0.2s);
+      text-shadow: $link-shadow--focus;
     }
 }
 
@@ -61,11 +63,8 @@
 .page-nav__link--scroll {
   @include font($main-header--small__size, $main-header--small__size * 1.25, $top-font__color);
   margin: 0;
-
-  &:hover {
-    color: $scroll-font__color--hover;
-  }
 }
+
 .page-nav__logo--scroll {
   width: 50px;
   height: 50px;

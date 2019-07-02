@@ -18,13 +18,11 @@
 
     width: 15px;
     height: 15px;
-    border: 10px solid #d45244;
+    border: 10px solid $about-circle__red;
     border-radius: 50%;
 
-    box-shadow:
-      0px 0px 0px 5px #f5eee3,
-      0px 0px 0px 10px #d45244;
-    background-color: #d45244;
+    box-shadow: $about-circle__shadow;
+    background-color: $about-circle__red;
     transform: translateX(-50%);
   }
 }

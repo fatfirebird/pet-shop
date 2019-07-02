@@ -9,10 +9,6 @@
 
   background-color: $scroll-bg__color;
 
-/*
-  background: transparentize(100, 100, 100, 0.2);
-*/
-
   opacity: 0;
   z-index: 1;
 }
@@ -22,12 +18,12 @@
   opacity: 0;
 
   &:hover {
-    @include slider(slider--show, 0.4s);
+    @include frames(element--show, 0.4s);
   }
 }
 
 .scroll-header--hide {
-  @include slider(slider--hide, 0.4s);
+  @include frames(elementr--hide, 0.4s);
 }
 
 .scroll-header--visually-hidden {

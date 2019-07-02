@@ -63,9 +63,8 @@
   animation-duration: $duration;
   animation-timing-function: $timing;
   animation-fill-mode: forwards;
-
 }
 
-@mixin slider($name, $duration) {
+@mixin frames($name, $duration) {
   @include animation($name, $duration, linear);
 }

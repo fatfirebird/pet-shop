@@ -31,4 +31,9 @@
   margin: 0 0 20px 0;
 
   color: $contacts-font__color;
+
+    &:hover,
+    &:focus {
+      @include frames(link-animation, 0.25s);
+    }
 }

@@ -1,4 +1,4 @@
-@include keyframes(slider--hide) {
+@include keyframes(element--hide) {
   0% {
     opacity: 1;
   }
@@ -15,7 +15,8 @@
     opacity: 0;
   }
 }
-@include keyframes(slider--show) {
+
+@include keyframes(element--show) {
   0% {
     opacity: 0;
   }
@@ -32,3 +33,27 @@
     opacity: 1;
   }
 }
+
+@include keyframes(link-animation) {
+  0% {
+    color: $top-font__color;
+  }
+  100% {
+    color: $scroll-font__color--hover;
+  }
+};
+
+@include keyframes(popup-animation) {
+  0% {
+    top: -5000px;
+  }
+  33% {
+    top: 20%;
+  }
+  66% {
+    top: 80%;
+  }
+  100% {
+    top: 50%;
+  }
+};

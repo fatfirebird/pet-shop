@@ -17,14 +17,13 @@
   height: 100%;
 }
 
-
 .slider-photo--hide {
-  @include slider(slider--hide, 0.75s);
+  @include frames(element--hide, 0.75s);
 
 }
 
 .slider-photo--show {
-  @include slider(slider--show, 0.75s);
+  @include frames(element--show, 0.75s);
 }
 
 .slider__description {

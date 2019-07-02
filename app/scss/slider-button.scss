@@ -30,9 +30,9 @@
 }
 
 .slider-buttton--hide {
-  @include slider(slider--hide, 0.3s);
+  @include frames(element--hide, 0.3s);
 }
 
 .slider-buttton--show {
-  @include slider(slider--show, 0.3s);
+  @include frames(element--show, 0.3s);
 }
