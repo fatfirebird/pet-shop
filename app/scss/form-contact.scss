@@ -6,10 +6,10 @@
   width: 500px;
 
   padding: 5px 0px 5px 5px;
-  margin-bottom: 10px;
-  border: 1px solid $form__color;
+  margin-bottom: 6px;
+  border: 2px solid $form__color;
 
-  border-radius: 5px;
+  border-radius: 8px;
 
   color: $main-font__color;
 
@@ -17,16 +17,22 @@
       color: $form__color;
     }
 
-    &--text {
-      resize: none;
+    &:focus,
+    &:hover {
+      border-color: $top-font__color;
+      outline: none;
     }
+}
 
-    &--red {
-      border-color: red;
-    }
-    &--green {
-      border-color: green;
-    }
+.form-contact__input--text {
+  resize: none;
+}
+
+.form-contact__input--red {
+  border-color: red;
+}
+.form-contact__input--green {
+  border-color: green;
 }
 
 .form-contact__submit {
@@ -37,4 +43,10 @@
 
   background-color: #fcfaf7;
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: $top-font__color;
+    outline: none;
+  }
 }

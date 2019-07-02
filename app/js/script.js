@@ -1,6 +1,7 @@
 let slider            = document.querySelector(".slider");
 let sliderButtonLeft  = document.querySelector(".slider-button--left");
 let sliderButtonRight = document.querySelector(".slider-button--right");
+let formInput         = document.querySelectorAll(".form-contact__input");
 let formInputName     = document.querySelector(".form-contact__input--name");
 let formInputEmail    = document.querySelector(".form-contact__input--email");
 let formInputTopic    = document.querySelector(".form-contact__input--topic");
@@ -124,6 +125,19 @@ slidesMove(slideIndex);
         overlay.classList.remove("overlay--hide");
     }
   });
+
+  formInput.forEach(function(formInput) {
+    formInput.addEventListener('focusout', function(evt) {
+      evt.preventDefault();
+      if (!formInput.value) {
+        formInput.classList.remove('form-contact__input--green');
+        formInput.classList.add('form-contact__input--red');
+      } else {
+        formInput.classList.remove('form-contact__input--red');
+        formInput.classList.add('form-contact__input--green');
+      }
+    })
+  })
 
   linkTransit.addEventListener("click", function(evt) {
     evt.preventDefault();
